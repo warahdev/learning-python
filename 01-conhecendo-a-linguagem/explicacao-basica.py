@@ -14,7 +14,7 @@ print(' Saída de dado '.center(30,'-'))
 # função print()
 print("Exemplo", "de", "texto")
 
-#  argumentos da função print()
+# argumentos da função print()
 print("maçã", "laranja", "morango",sep=",\n", end=".\n")
 
 
@@ -31,8 +31,8 @@ várias linhas.
 texto = "   O céu é azul! !"
 print(texto.upper())
 print(texto.lower())
-print(texto.strip())  # tirá os espaços em branco no início e no fim apenas
-print(texto.split())
+print(texto.strip())  # tira os espaços em branco no início e no fim apenas
+print(texto.split())  # transforma em lista
 print('-'.join(texto.split()))  # ou -> '-'.join(['O', 'céu', 'é', 'azul!', '!'])
 
 # formatação string
@@ -46,7 +46,7 @@ print("O nome dele é %s e ele tem %d anos." % (nome, idade))
 print("O nome dele é {} e ele tem {} anos.".format(nome, idade))
 
 # f-string
-print("O nome dele é {nome} e ele tem {idade} anos.")
+print(f'O nome dele é {nome} e ele tem {idade} anos.')
 
 
 # 4.
@@ -61,7 +61,7 @@ print(10 == 10, type(10 == 10))
 # Conversão
 numero = "10"  # str
 convertido_p_numero = int(numero)  # convertendo para int
-print(convertido_p_numero, type(convertido_p_numero))
+print(f'Exemplo: {convertido_p_numero}', type(convertido_p_numero))
 print("Outro modo de converter diretamente",int(numero), type(int(numero)))
 
 convertido_p_float = float(numero)  # convertendo para float
