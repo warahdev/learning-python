@@ -1,4 +1,4 @@
-import os
+import os  # Importando o módulo Operating System
 
 def exibir_nome_programa():
     print('''
