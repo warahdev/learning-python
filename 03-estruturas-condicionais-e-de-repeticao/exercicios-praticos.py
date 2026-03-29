@@ -1,11 +1,12 @@
 import os  # Importando o módulo Operating System
 
+# Cabeçalho
 def exibir_nome_programa():
     print('''
     Exercicios
     Selecione qual deseja ver:\n''')
 
-# opções
+# Opções
 def exibir_opcoes():
     print('1. Calculadora.')  # 3
     print('2. Classificador de idade.')  # 3
@@ -14,20 +15,20 @@ def exibir_opcoes():
     print('5. Tabuada personalizada')  # 3
     print('6. Sair\n')
 
-# finalizar o app
+# Finalização
 def finalizar_app():
     exibir_subtitulo('Finalizando...') #refatorando o código
 
-# voltando para o menu principal
+# Retorno para o menu de opções
 def voltar_ao_menu():
     input('\nDigite uma tecla para voltar ao menu principal ')
     os.system('cls')  # limpa a tela antes de voltar ao menu
 
-# quando a opção que o usuário submeteu for invalida
+# Retorno inválido
 def opcao_invalida():
     print('\nOpção invalida.')
 
-# refatorando a ação limpar tela + nome da ação
+# Limpando o terminal
 def exibir_subtitulo(texto):
     os.system('cls')
     print(texto)
@@ -35,7 +36,7 @@ def exibir_subtitulo(texto):
 
 ########################################################################
 
-# Exercicios:
+# Exercícios:
 def ex_calculadora():
     exibir_subtitulo('1. Calculadora Simples')
 
@@ -109,13 +110,17 @@ def ex_tabuada():
 
 ########################################################################
 
-# quando a opção desejada é selecionada
+# Estrutura
 def escolher_opcao():
+
     while True:
+
         exibir_nome_programa()
         exibir_opcoes()
+
         try:
             opcao_escolhida = int(input('Escolha uma opção: '))
+
             match opcao_escolhida:
                 case 1:
                     ex_calculadora()
@@ -132,6 +137,7 @@ def escolher_opcao():
                     break  # sai do loop
                 case _:
                     opcao_invalida()
+                    
         except:
             opcao_invalida()
             voltar_ao_menu()
