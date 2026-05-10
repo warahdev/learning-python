@@ -9,11 +9,13 @@ print(letras)
 numeros = list(range(10))
 print(numeros)
 
+
 # Operações básicas
 print('Operações básicas'.center(40,'-'))
 
 print(letras[1:3])  # saída: index 1 e 2
 print(letras[::-1])
+
 
 # Função enumerate
 print('Função enumerate'.center(40,'-'))
@@ -45,3 +47,39 @@ print(f'Ordena a lista: {lista_dois}')
 
 lista_dois.sort(key=lambda x: len(x), reverse=True)
 print(f'Ordena a lista pelo tamanho de cada objto e de trás pra frente: {lista_dois}')
+
+# exemplo de tupla
+frutas = ('maçã', 'banana', 'uva')
+
+print(frutas[0])  # Acessando elementos
+
+for fruta in frutas:  # Percorrendo a tupla
+    print(fruta)
+
+# exemplo de conjunto
+numeros = {1, 2, 3, 3, 4}
+
+print(numeros)
+
+numeros.add(5)  # Adicionando elemento
+
+numeros.remove(2)  # Removendo elemento
+
+print(numeros)
+
+
+# exexmplo de dicionario
+pessoa = {
+    'nome': 'Pedro',
+    'idade': 25,
+    'cidade': 'Curitiba'
+}
+
+print(pessoa["nome"])  # Acessando valores
+
+pessoa["profissao"] = "Contador"  # Adicionando novo item
+
+pessoa["idade"] = 26  # Alterando valor
+
+for chave, valor in pessoa.items():  # Percorrendo o dicionário
+    print(chave, ":", valor)
